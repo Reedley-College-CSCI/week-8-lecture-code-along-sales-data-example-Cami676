@@ -3,6 +3,7 @@
 using namespace std;
 
 void showDay();
+void showAmounts(double arr[], int size);
 
 int main() {
     const int MAX_SIZE = 10;
@@ -19,6 +20,11 @@ int main() {
    // cout << "Array memory: ~" <<
    // sizeof(amounts);
    double max = amounts[0];
+   int transactions[MAX_SIZE] = {50,75,40,60,30,45,55};
+  for (int i = 0; i < numDays; i++){
+    cout << "Day" << i + 1 << ": $" <<
+    amounts[i] << ", " << transactions[i] << endl;
+  }
    for (int i = 0; i < numDays; i++){
     cout << "Day " << i + 1 << ": $" << 
     amounts[i] << endl;
@@ -35,9 +41,18 @@ int main() {
    }
    cout << endl;
    */
+  
+
     return 0;
 }
 void showDay(){
     static int dayNum = 1; //Persists
     cout << "Showing day" << dayNum << endl;
+}
+void showAmounts(double arr[], int size){
+    for (int i = 0; i < size ; i++){
+        cout << "$" << arr[i]<< " ";
+
+    }
+    cout << endl;
 }
